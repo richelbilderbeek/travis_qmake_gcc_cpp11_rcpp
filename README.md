@@ -8,6 +8,11 @@ This GitHub is part of
  * [the Travis C++ Tutorial](https://github.com/richelbilderbeek/travis_cpp_tutorial)
  * [the Travis R Tutorial](https://github.com/richelbilderbeek/travis_r_tutorial)
 
+In RStudio, do not forget to run the following line first:
+```
+Sys.setenv("PKG_CXXFLAGS"="-std=c++11")
+```
+
 The goal of this project is to have a clean Travis CI build, with specs:
  * Build system: `qmake`
  * C++ compiler: `gcc`

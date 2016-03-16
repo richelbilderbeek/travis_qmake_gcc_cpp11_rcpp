@@ -9,7 +9,7 @@ using namespace Rcpp;
 //' @return Magic value
 //' @export
 // [[Rcpp::export]]
-int do_magic_cpp(const int x)
+int do_magic_cpp(const int x) noexcept
 {
   return x * 2;
 }

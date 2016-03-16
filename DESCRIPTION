@@ -1,6 +1,6 @@
 Package: domagic
 Type: Package
-Title: A minimal example that uses qmake, GCC, C++98 and Rcpp
+Title: A minimal example that uses qmake, GCC, C++11 and Rcpp
 Version: 1.0
 Date: 2016-03-16
 Author: Richel Bilderbeek

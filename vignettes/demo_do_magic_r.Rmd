@@ -10,6 +10,7 @@ vignette: >
 ---
 
 ```{r}
+Sys.setenv("PKG_CXXFLAGS"="-std=c++11")
 library(domagic)
 x <- c(42)
 y <- do_magic_r(x) # The argument must be a single value
