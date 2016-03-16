@@ -1,0 +1,20 @@
+Package: domagic
+Type: Package
+Title: A minimal example that uses qmake, GCC, C++98 and Rcpp
+Version: 1.0
+Date: 2016-03-16
+Author: Richel Bilderbeek
+Maintainer: Richel Bilderbeek <richel@srichelbilderbeek.nl>
+Description: The tests within the R package should call the R function
+    'do_magic_r'. 'do_magic_r' calls the C++ function 'do_magic_cpp'. Additionally,
+    the C++ code can also be run and tested stand-alone.
+License: file LICENSE
+Suggests:
+    testthat,
+    knitr,
+    rmarkdown
+LinkingTo: Rcpp
+Imports:
+    Rcpp
+RoxygenNote: 5.0.1
+VignetteBuilder: knitr
