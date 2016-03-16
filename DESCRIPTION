@@ -18,3 +18,4 @@ Imports:
     Rcpp
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+SystemRequirements: C++11
