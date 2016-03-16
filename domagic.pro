@@ -3,6 +3,14 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
+# Rcpp does not play nice with -Weffc++
+QMAKE_CXXFLAGS += -Wall -Wextra -Werror
+
+QMAKE_CXX = g++-5
+QMAKE_LINK = g++-5
+QMAKE_CC = gcc-5
+QMAKE_CXXFLAGS += -std=c++11
+
 INCLUDEPATH += src
 INCLUDEPATH += /home/p230198/R/x86_64-pc-linux-gnu-library/3.2/Rcpp/include
 #INCLUDEPATH += /home/p230198/R/x86_64-pc-linux-gnu-library/3.2/Rcpp11/include/Rcpp
