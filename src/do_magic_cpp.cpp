@@ -1,5 +1,13 @@
 #include "do_magic_cpp.h"
 
+// When you get:
+// error: Rcpp.h: No such file or directory
+// then use
+//
+// cd /
+// find . | egrep "Rcpp\.h"
+//
+// and add the path to the INCLUDEPATH
 #include <Rcpp.h>
 
 using namespace Rcpp;
