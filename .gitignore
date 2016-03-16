@@ -34,3 +34,4 @@ domagic.Rcheck/
 *.pro.user
 .nsf*
 src/.nsf*
+.Rhistory
