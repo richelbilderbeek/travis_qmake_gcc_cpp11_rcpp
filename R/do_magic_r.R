@@ -7,5 +7,3 @@
 do_magic_r <- function(x) {
   return(do_magic_cpp(x))
 }
-
-

@@ -4,7 +4,6 @@
 //' @param x Input
 //' @return Magic value
 // [[Rcpp::export]]
-int do_magic_cpp(const int x) noexcept
-{
+int do_magic_cpp(const int x) noexcept {
   return x * 2;
 }
