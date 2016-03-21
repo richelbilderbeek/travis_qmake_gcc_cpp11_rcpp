@@ -35,3 +35,5 @@ domagic.Rcheck/
 .nsf*
 src/.nsf*
 .Rhistory
+domagic
+Makefile
