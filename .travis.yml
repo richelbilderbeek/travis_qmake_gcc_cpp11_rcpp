@@ -1,4 +1,41 @@
-# PKG_CXXFLAGS=-std=c++11
-language: r
-warnings_are_errors: true
-sudo: required
+sudo: true
+language: cpp
+compiler: gcc
+
+addons: 
+  apt: 
+    packages: libboost-all-dev
+
+before_install:
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test; 
+  - sudo add-apt-repository -y ppa:marutter/rrutter 
+  - sudo apt-get update -qq
+
+install: 
+  - sudo apt-get install -qq g++-4.8 
+  - sudo apt-get install r-base r-base-dev 
+  - sudo apt-get install -qq lyx
+  - sudo apt-get install -qq texlive
+
+script: 
+ - ./build_cpp.sh
+ - ./clean.sh
+ - sudo Rscript install_r_packages.R
+ # R wants all hidden files gone...
+ - rm .gitignore
+ - rm src/.gitignore
+ - rm .travis_cpp_and_r.yml
+ - rm .travis_lyx.yml
+ - rm .travis_r.yml
+ - rm .travis.yml
+ - rm -rf .git
+ - rm -rf ..Rcheck
+ # Now R is ready to go
+ - R CMD check .
+
+after_script:
+ - cat /home/travis/build/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp/..Rcheck/00install.out
+
+
+#  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 
+#  - deb http://cran.r-project.org/bin/linux/ubuntu precise/ 
