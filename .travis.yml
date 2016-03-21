@@ -8,16 +8,16 @@ before_install:
  - sudo apt-get update -qq
 
 install: 
- - sudo apt-get install -qq g++-5 # C++11
- - sudo apt-get install -qq r-base r-base-dev # R
- - sudo apt-get install -qq lyx texlive # pdflatex, used by knitr
+ - sudo apt-get install -qq g++-5  # C++11
+ - sudo apt-get install -qq r-base r-base-dev  # R
+ - sudo apt-get install -qq lyx texlive  # pdflatex, used by knitr
+ - sudo Rscript install_r_packages.R  # Rcpp
 
 script: 
  # C++
  - ./build_cpp.sh
  # R wants all non-R files gone...
  - ./clean.sh
- - sudo Rscript install_r_packages.R
  - rm .gitignore
  - rm src/.gitignore
  - rm .travis.yml
