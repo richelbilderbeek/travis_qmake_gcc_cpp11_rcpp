@@ -26,6 +26,10 @@ script:
  # Now R is ready to go
  - R CMD check .
 
-after_script:
+after_failure:
+ # fatal error: Rcpp.h: No such file or directory
+ - find / -name 'Rcpp.h'
+ # R logs
  - cat /home/travis/build/richelbilderbeek/travis_qmake_gcc_cpp98_rcpp/..Rcheck/00install.out
+
 
