@@ -3,15 +3,14 @@ language: cpp
 compiler: gcc
 
 before_install:
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test # C++11
-  - sudo add-apt-repository -y ppa:marutter/rrutter # R
-  - sudo apt-get update -qq
+ - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test # C++11
+ - sudo add-apt-repository -y ppa:marutter/rrutter # R
+ - sudo apt-get update -qq
 
 install: 
  - sudo apt-get install -qq g++-5 # C++11
-  - sudo apt-get install r-base r-base-dev # R
-  - sudo apt-get install -qq lyx     # pdflatex, used by knitr
-  - sudo apt-get install -qq texlive # pdflatex, used by knitr
+ - sudo apt-get install -qq r-base r-base-dev # R
+ - sudo apt-get install -qq lyx texlive # pdflatex, used by knitr
 
 script: 
  # C++
