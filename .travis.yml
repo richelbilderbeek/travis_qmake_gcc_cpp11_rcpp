@@ -26,7 +26,7 @@ script:
   # Now R is ready to go
   - R CMD check .
 
-after_succes:
+after_success:
   - cat /home/travis/build/richelbilderbeek/travis_qmake_gcc_cpp11_rcpp/..Rcheck/00check.log
 
 after_failure:
