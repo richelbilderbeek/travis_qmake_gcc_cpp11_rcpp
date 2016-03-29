@@ -4,7 +4,6 @@
 #' Does magic
 #' @param x Input
 #' @return Magic value
-#' @export
 do_magic_cpp <- function(x) {
     .Call('domagic_do_magic_cpp', PACKAGE = 'domagic', x)
 }

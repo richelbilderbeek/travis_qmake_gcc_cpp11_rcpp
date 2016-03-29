@@ -1,9 +1,9 @@
 #include "do_magic_cpp.h"
 
-//' Does magic
-//' @param x Input
-//' @return Magic value
-// [[Rcpp::export]]
+//#include <Rcpp.h>
+
+//using namespace Rcpp;
+
 int do_magic_cpp(const int x) noexcept {
   return x * 2;
 }
