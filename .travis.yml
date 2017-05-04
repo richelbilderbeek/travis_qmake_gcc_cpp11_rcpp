@@ -9,8 +9,11 @@ before_install:
   - sudo apt-get update -qq
 
 install: 
-  - sudo apt-get install -qq g++-5  # C++11
-  - sudo apt-get install -qq r-base r-base-dev  # R
+  # C++14
+  - sudo apt-get install -qq g++-5
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  # R
+  - sudo apt-get install -qq r-base r-base-dev
   - sudo apt-get install -qq lyx texlive  # pdflatex, used by knitr
   - sudo Rscript install_r_packages.R  # Rcpp
 
