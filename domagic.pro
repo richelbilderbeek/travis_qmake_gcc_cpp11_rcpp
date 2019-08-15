@@ -3,11 +3,6 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG -= qt
 
-# C++11
-CONFIG += c++11
-QMAKE_CXXFLAGS += -std=c++11
-
-# Shared C++11 files
 INCLUDEPATH += src
 SOURCES += src/do_magic_cpp.cpp
 HEADERS += src/do_magic_cpp.h
